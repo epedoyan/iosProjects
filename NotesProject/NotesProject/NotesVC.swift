@@ -20,7 +20,7 @@ class NotesVC: UIViewController, UISearchResultsUpdating, UITableViewDataSource,
     var allNotes = [Notes]()
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad() //test
 
         self.definesPresentationContext = true // ???
         searchController.searchResultsUpdater = self
