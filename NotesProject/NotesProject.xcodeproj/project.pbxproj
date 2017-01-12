@@ -235,6 +235,7 @@
 				TargetAttributes = {
 					65713AF51DF82C6A00D1A540 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 6U8RWC3989;
 						ProvisioningStyle = Automatic;
 					};
 					65713B0C1DF82C6B00D1A540 = {
@@ -460,6 +461,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6U8RWC3989;
 				INFOPLIST_FILE = NotesProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com..NotesProject;
@@ -472,6 +474,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6U8RWC3989;
 				INFOPLIST_FILE = NotesProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com..NotesProject;

@@ -39,14 +39,14 @@ class NoteDetailVC: UIViewController {
         super.viewWillDisappear(true)
         
         if self.isMovingFromParentViewController && !self.isAddNoteButtonPressed {
-            self.f()
+            self.addOrUpdateNote()
         }
         NotificationCenter.default.removeObserver(self) // interesting!
     }
     
     @IBAction func addNoteButtonAction(_ sender: UIButton) {
         self.isAddNoteButtonPressed = true
-        self.f()
+        self.addOrUpdateNote()
     }
     
     func getCurrentDateAsString() -> String {
@@ -55,34 +55,24 @@ class NoteDetailVC: UIViewController {
         formatter.dateFormat = "MM.dd.yyyy"
         formatter.dateStyle = .short
         return formatter.string(from: date)
+        //Question about time, time, today, yesterday, ..., date ???
     }
 
-    func f() {
+    func addOrUpdateNote() {
         if noteDetailTextView.text.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) != "" && !noteDetailTextView.text.isEmpty {
-            let moc = CoreDataManger.sharedManager.getContext() // ??? outside if i ujas
             if let selectedNote = selectedNote {
                 selectedNote.noteInfo = self.noteDetailTextView.text
+                CoreDataManger.sharedManager.save(context: CoreDataManger.sharedManager.getContext())
             } else {
-                let newNote = Notes(context: moc)
-                // ??? Question about time, time, today, yesterday, ..., date
-                //Notes(entity: Notes.entity(), insertInto: moc)
-                //let newNote = NSEntityDescription.insertNewObject(forEntityName: "Notes", into: context) as! Notes
-                newNote.noteInfo = noteDetailTextView.text
-                newNote.dateTime = self.getCurrentDateAsString()
-                _ = self.navigationController?.popViewController(animated: true)
+                CoreDataManger.sharedManager.insertNewNote(with: noteDetailTextView.text, dateTime: getCurrentDateAsString())
             }
-            do {
-                try moc.save()
-            } catch {
-                fatalError("Failure to save context.")
-            }
+             _ = self.navigationController?.popViewController(animated: true)
         }
     }
     
     func keyboardWillShow(notification: Notification) {
         if let keyboardRectValue = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue
         {
-            //noteDetailTextView.frame.size.height ???
             self.noteDetailTextViewHeight.constant = self.view.frame.height - (keyboardRectValue.height + self.navigationController!.navigationBar.frame.height + UIApplication.shared.statusBarFrame.height + 40)
             self.addNoteButton.isHidden = false
         }

@@ -35,6 +35,24 @@ class CoreDataManger: NSObject {
         }
     }
     
+    func save(context: NSManagedObjectContext) {
+        do {
+            try context.save()
+        } catch {
+            fatalError("Failure to save context.")
+        }
+    }
+    
+    func insertNewNote(with info: String, dateTime: String) {
+        //Notes(entity: Notes.entity(), insertInto: moc)
+        //let newNote = NSEntityDescription.insertNewObject(forEntityName: "Notes", into: context) as! Notes
+        let moc = self.getContext()
+        let newNote = Notes(context: moc)
+        newNote.noteInfo = info
+        newNote.dateTime = dateTime
+        self.save(context: moc)
+    }
+    
     func fetchSelectedNote(with objectID: NSManagedObjectID) -> Notes {
         let moc = self.getContext()
         return moc.object(with: objectID) as! Notes

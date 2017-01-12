@@ -20,7 +20,8 @@ class NotesVC: UIViewController, UISearchResultsUpdating, UITableViewDataSource,
     var allNotes = [Notes]()
     
     override func viewDidLoad() {
-        super.viewDidLoad() //test
+        super.viewDidLoad()
+        self.allNotes = CoreDataManger.sharedManager.fetchAllNotes()
 
         self.definesPresentationContext = true // ???
         searchController.searchResultsUpdater = self
@@ -40,7 +41,6 @@ class NotesVC: UIViewController, UISearchResultsUpdating, UITableViewDataSource,
         self.allNotes = CoreDataManger.sharedManager.fetchAllNotes()
         //self.notesTableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: UITableViewScrollPosition.top, animated: false)
         self.notesTableView.reloadData()
-        
     }
     
     // MARK: - UISearchResultsUpdating
