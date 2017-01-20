@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oxf-6m-V2U">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oxf-6m-V2U">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -38,8 +41,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nWy-ju-rSM" userLabel="Bottom View">
+                                <rect key="frame" x="0.0" y="600.5" width="375" height="66.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zbx-Bs-m42" userLabel="New Note Button">
+                                        <rect key="frame" x="333" y="22" width="22" height="22"/>
                                         <connections>
                                             <action selector="newNoteButtonAction:" destination="4ss-aq-okB" eventType="touchUpInside" id="iGC-eW-k2u"/>
                                         </connections>
@@ -52,21 +57,24 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="111" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qmo-Wr-QnC" userLabel="Notes Table View">
+                                <rect key="frame" x="0.0" y="64" width="375" height="536.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoteCell" id="fhq-mE-J1d" userLabel="Note Table View Cell" customClass="NoteCell" customModule="NotesProject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="111"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fhq-mE-J1d" id="9pq-62-oqj">
-                                            <frame key="frameInset" width="375" height="110.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="110.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TimeLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iHZ-jN-Vqh" userLabel="Date Time Label">
+                                                    <rect key="frame" x="15" y="63.5" width="79.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y77-aw-SKp">
+                                                    <rect key="frame" x="15" y="26.5" width="86.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -125,6 +133,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RK1-FH-XTt">
+                                <rect key="frame" x="0.0" y="64" width="375" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="lPL-Pn-aYS"/>
                                 </constraints>
@@ -132,9 +141,10 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0L-Xk-8yh">
+                                <rect key="frame" x="345" y="384" width="10" height="10"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="5M1-IO-Rzo"/>
-                                    <constraint firstAttribute="width" constant="40" id="fag-eX-KsU"/>
+                                    <constraint firstAttribute="height" constant="10" id="5M1-IO-Rzo"/>
+                                    <constraint firstAttribute="width" constant="10" id="fag-eX-KsU"/>
                                 </constraints>
                                 <connections>
                                     <action selector="addNoteButtonAction:" destination="iYc-Rr-gZR" eventType="touchUpInside" id="fD5-Fb-4WZ"/>
@@ -144,13 +154,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="RK1-FH-XTt" firstAttribute="top" secondItem="gGF-dX-AV0" secondAttribute="bottom" id="3L6-48-Met"/>
-                            <constraint firstItem="e0L-Xk-8yh" firstAttribute="top" secondItem="RK1-FH-XTt" secondAttribute="bottom" id="7zL-cD-oDj"/>
+                            <constraint firstItem="e0L-Xk-8yh" firstAttribute="top" secondItem="RK1-FH-XTt" secondAttribute="bottom" constant="20" id="7zL-cD-oDj"/>
                             <constraint firstAttribute="trailing" secondItem="RK1-FH-XTt" secondAttribute="trailing" id="Agd-S2-BnC"/>
-                            <constraint firstAttribute="trailing" secondItem="e0L-Xk-8yh" secondAttribute="trailing" id="FZs-lX-bd1"/>
+                            <constraint firstAttribute="trailing" secondItem="e0L-Xk-8yh" secondAttribute="trailing" constant="20" id="FZs-lX-bd1"/>
                             <constraint firstItem="RK1-FH-XTt" firstAttribute="leading" secondItem="xZr-Oo-a25" secondAttribute="leading" id="rdg-F2-33S"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="yTn-Ud-vxn"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
@@ -161,7 +174,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t2b-7V-i5J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1742" y="-562"/>
+            <point key="canvasLocation" x="1770" y="-562"/>
         </scene>
     </scenes>
 </document>

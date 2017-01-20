@@ -12,7 +12,7 @@ import CoreData
 //extension
 
 class NotesVC: UIViewController, UISearchResultsUpdating, UITableViewDataSource, UITableViewDelegate {
-    // ??? remove UITableViewDataSource, UITableViewDelegate and enjoy the crash of the app :P
+    
     @IBOutlet weak var notesTableView: UITableView!
     
     let searchController = UISearchController(searchResultsController: nil)
@@ -21,8 +21,9 @@ class NotesVC: UIViewController, UISearchResultsUpdating, UITableViewDataSource,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.allNotes = CoreDataManger.sharedManager.fetchAllNotes()
-
+        
+        //self.allNotes = CoreDataManager.shared.fetchAllNotes() // ?????
+        
         self.definesPresentationContext = true // ???
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
@@ -30,16 +31,25 @@ class NotesVC: UIViewController, UISearchResultsUpdating, UITableViewDataSource,
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.navigationItem.rightBarButtonItem?.action = #selector(editDoneButtonAction(sender:))
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
+    func editDoneButtonAction(sender: UIBarButtonItem) {
+        sender.title = sender.title == "Edit" ? "Done" : "Edit"
         
-        self.allNotes = CoreDataManger.sharedManager.fetchAllNotes()
-        //self.notesTableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: UITableViewScrollPosition.top, animated: false)
+        if self.notesTableView.isEditing {
+            self.notesTableView.isEditing = false
+        }
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.allNotes = CoreDataManager.shared.fetchAllNotes()
+         notesTableView.setContentOffset(CGPoint(x: 0, y: self.searchController.searchBar.frame.height), animated: false)
         self.notesTableView.reloadData()
     }
     
@@ -67,12 +77,30 @@ class NotesVC: UIViewController, UISearchResultsUpdating, UITableViewDataSource,
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedNoteObjectID = getNotesList()[indexPath.row].objectID
-        let selectedNote = CoreDataManger.sharedManager.fetchSelectedNote(with: selectedNoteObjectID)
+        let selectedNote = getNotesList()[indexPath.row]
         // did force unwrap below ???
         let noteDetailsVC = storyboard!.instantiateViewController(withIdentifier: "newNoteVC") as! NoteDetailVC
         noteDetailsVC.selectedNote = selectedNote
         self.navigationController!.pushViewController(noteDetailsVC, animated: true)
+    }
+    
+    // Override to support editing the table view.
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            CoreDataManager.shared.delete(note: getNotesList()[indexPath.row])
+            self.allNotes.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade) // ???
+        } else if editingStyle == .insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, willBeginEditingRowAt indexPath: IndexPath) {
+        navigationItem.rightBarButtonItem?.title = "Done"
+    }
+    
+    func tableView(_ tableView: UITableView, didEndEditingRowAt indexPath: IndexPath?) {
+        navigationItem.rightBarButtonItem?.title = "Edit"
     }
     
     // MARK: - Actions
@@ -94,18 +122,6 @@ class NotesVC: UIViewController, UISearchResultsUpdating, UITableViewDataSource,
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
     }
     */
 
