@@ -1,0 +1,435 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3A711AE2CE6824D8D8574A73 /* Pods_InommaTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C978CEA4D1492FDAA265687 /* Pods_InommaTask.framework */; };
+		6500620E1E48F161004BF5E1 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500620D1E48F161004BF5E1 /* UserCell.swift */; };
+		650062161E49FDBB004BF5E1 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650062151E49FDBB004BF5E1 /* MainVC.swift */; };
+		65D614B81E4765970043A850 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D614B71E4765970043A850 /* AppDelegate.swift */; };
+		65D614BD1E4765970043A850 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65D614BB1E4765970043A850 /* Main.storyboard */; };
+		65D614BF1E4765970043A850 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65D614BE1E4765970043A850 /* Assets.xcassets */; };
+		65D614C21E4765970043A850 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65D614C01E4765970043A850 /* LaunchScreen.storyboard */; };
+		65D614D31E476B5E0043A850 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65D614D21E476B5E0043A850 /* FBSDKCoreKit.framework */; };
+		65D614D51E476B6D0043A850 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65D614D41E476B6D0043A850 /* FBSDKLoginKit.framework */; };
+		65D614D71E4774B10043A850 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65D614D61E4774B10043A850 /* Bolts.framework */; };
+		65D614D91E47B2F50043A850 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65D614D81E47B2F50043A850 /* GoogleService-Info.plist */; };
+		65D614DC1E47E5740043A850 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65D614DB1E47E5740043A850 /* FBSDKShareKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5C978CEA4D1492FDAA265687 /* Pods_InommaTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InommaTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6500620D1E48F161004BF5E1 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		650062151E49FDBB004BF5E1 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		65D614B41E4765970043A850 /* InommaTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InommaTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		65D614B71E4765970043A850 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		65D614BC1E4765970043A850 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		65D614BE1E4765970043A850 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		65D614C11E4765970043A850 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		65D614C31E4765970043A850 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65D614D21E476B5E0043A850 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = InommaTask/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		65D614D41E476B6D0043A850 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = InommaTask/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		65D614D61E4774B10043A850 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = InommaTask/Bolts.framework; sourceTree = "<group>"; };
+		65D614D81E47B2F50043A850 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		65D614DA1E47E03E0043A850 /* InommaTask.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = InommaTask.entitlements; sourceTree = "<group>"; };
+		65D614DB1E47E5740043A850 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = InommaTask/FBSDKShareKit.framework; sourceTree = "<group>"; };
+		B325ED42A849C4B2B88F0B02 /* Pods-InommaTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InommaTask.release.xcconfig"; path = "Pods/Target Support Files/Pods-InommaTask/Pods-InommaTask.release.xcconfig"; sourceTree = "<group>"; };
+		D6304E018EC65FCB0D1F7A6B /* Pods-InommaTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InommaTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InommaTask/Pods-InommaTask.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		65D614B11E4765970043A850 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65D614D71E4774B10043A850 /* Bolts.framework in Frameworks */,
+				65D614D51E476B6D0043A850 /* FBSDKLoginKit.framework in Frameworks */,
+				65D614DC1E47E5740043A850 /* FBSDKShareKit.framework in Frameworks */,
+				65D614D31E476B5E0043A850 /* FBSDKCoreKit.framework in Frameworks */,
+				3A711AE2CE6824D8D8574A73 /* Pods_InommaTask.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2FF7A5E6A48F392B870370E6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D6304E018EC65FCB0D1F7A6B /* Pods-InommaTask.debug.xcconfig */,
+				B325ED42A849C4B2B88F0B02 /* Pods-InommaTask.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		64E20590BDDC9DC058876912 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				65D614DB1E47E5740043A850 /* FBSDKShareKit.framework */,
+				65D614D61E4774B10043A850 /* Bolts.framework */,
+				65D614D41E476B6D0043A850 /* FBSDKLoginKit.framework */,
+				65D614D21E476B5E0043A850 /* FBSDKCoreKit.framework */,
+				5C978CEA4D1492FDAA265687 /* Pods_InommaTask.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		650062141E48F5D0004BF5E1 /* Plist Files */ = {
+			isa = PBXGroup;
+			children = (
+				65D614C31E4765970043A850 /* Info.plist */,
+				65D614D81E47B2F50043A850 /* GoogleService-Info.plist */,
+			);
+			name = "Plist Files";
+			path = InommaTask;
+			sourceTree = "<group>";
+		};
+		65D614AB1E4765970043A850 = {
+			isa = PBXGroup;
+			children = (
+				65D614B61E4765970043A850 /* InommaTask */,
+				65D614B51E4765970043A850 /* Products */,
+				650062141E48F5D0004BF5E1 /* Plist Files */,
+				2FF7A5E6A48F392B870370E6 /* Pods */,
+				64E20590BDDC9DC058876912 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		65D614B51E4765970043A850 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				65D614B41E4765970043A850 /* InommaTask.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		65D614B61E4765970043A850 /* InommaTask */ = {
+			isa = PBXGroup;
+			children = (
+				65D614B71E4765970043A850 /* AppDelegate.swift */,
+				650062151E49FDBB004BF5E1 /* MainVC.swift */,
+				65D614BB1E4765970043A850 /* Main.storyboard */,
+				6500620D1E48F161004BF5E1 /* UserCell.swift */,
+				65D614BE1E4765970043A850 /* Assets.xcassets */,
+				65D614C01E4765970043A850 /* LaunchScreen.storyboard */,
+				65D614DA1E47E03E0043A850 /* InommaTask.entitlements */,
+			);
+			path = InommaTask;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		65D614B31E4765970043A850 /* InommaTask */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65D614C61E4765970043A850 /* Build configuration list for PBXNativeTarget "InommaTask" */;
+			buildPhases = (
+				1A516E69BF05D41ED920C90C /* [CP] Check Pods Manifest.lock */,
+				65D614B01E4765970043A850 /* Sources */,
+				65D614B11E4765970043A850 /* Frameworks */,
+				65D614B21E4765970043A850 /* Resources */,
+				092C416A6C167930DE18C31F /* [CP] Embed Pods Frameworks */,
+				96A6EFA3336A54E6E9C629AA /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InommaTask;
+			productName = InommaTask;
+			productReference = 65D614B41E4765970043A850 /* InommaTask.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		65D614AC1E4765970043A850 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Codefights;
+				TargetAttributes = {
+					65D614B31E4765970043A850 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 6U8RWC3989;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 65D614AF1E4765970043A850 /* Build configuration list for PBXProject "InommaTask" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 65D614AB1E4765970043A850;
+			productRefGroup = 65D614B51E4765970043A850 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				65D614B31E4765970043A850 /* InommaTask */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		65D614B21E4765970043A850 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65D614C21E4765970043A850 /* LaunchScreen.storyboard in Resources */,
+				65D614D91E47B2F50043A850 /* GoogleService-Info.plist in Resources */,
+				65D614BF1E4765970043A850 /* Assets.xcassets in Resources */,
+				65D614BD1E4765970043A850 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		092C416A6C167930DE18C31F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InommaTask/Pods-InommaTask-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1A516E69BF05D41ED920C90C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		96A6EFA3336A54E6E9C629AA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InommaTask/Pods-InommaTask-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		65D614B01E4765970043A850 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				650062161E49FDBB004BF5E1 /* MainVC.swift in Sources */,
+				65D614B81E4765970043A850 /* AppDelegate.swift in Sources */,
+				6500620E1E48F161004BF5E1 /* UserCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		65D614BB1E4765970043A850 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				65D614BC1E4765970043A850 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		65D614C01E4765970043A850 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				65D614C11E4765970043A850 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		65D614C41E4765970043A850 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		65D614C51E4765970043A850 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		65D614C71E4765970043A850 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6304E018EC65FCB0D1F7A6B /* Pods-InommaTask.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6U8RWC3989;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/InommaTask",
+				);
+				INFOPLIST_FILE = InommaTask/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com..InommaTask;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		65D614C81E4765970043A850 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B325ED42A849C4B2B88F0B02 /* Pods-InommaTask.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6U8RWC3989;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/InommaTask",
+				);
+				INFOPLIST_FILE = InommaTask/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com..InommaTask;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		65D614AF1E4765970043A850 /* Build configuration list for PBXProject "InommaTask" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65D614C41E4765970043A850 /* Debug */,
+				65D614C51E4765970043A850 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65D614C61E4765970043A850 /* Build configuration list for PBXNativeTarget "InommaTask" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65D614C71E4765970043A850 /* Debug */,
+				65D614C81E4765970043A850 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 65D614AC1E4765970043A850 /* Project object */;
+}

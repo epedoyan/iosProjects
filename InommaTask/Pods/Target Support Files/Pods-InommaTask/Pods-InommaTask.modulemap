@@ -1,0 +1,6 @@
+framework module Pods_InommaTask {
+  umbrella header "Pods-InommaTask-umbrella.h"
+
+  export *
+  module * { export * }
+}
