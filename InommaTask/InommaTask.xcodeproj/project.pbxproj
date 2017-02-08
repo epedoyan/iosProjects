@@ -10,6 +10,8 @@
 		3A711AE2CE6824D8D8574A73 /* Pods_InommaTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C978CEA4D1492FDAA265687 /* Pods_InommaTask.framework */; };
 		6500620E1E48F161004BF5E1 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500620D1E48F161004BF5E1 /* UserCell.swift */; };
 		650062161E49FDBB004BF5E1 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650062151E49FDBB004BF5E1 /* MainVC.swift */; };
+		6500621E1E4AF290004BF5E1 /* FireBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500621D1E4AF290004BF5E1 /* FireBase.swift */; };
+		650062221E4B082F004BF5E1 /* Facebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650062211E4B082F004BF5E1 /* Facebook.swift */; };
 		65D614B81E4765970043A850 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D614B71E4765970043A850 /* AppDelegate.swift */; };
 		65D614BD1E4765970043A850 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65D614BB1E4765970043A850 /* Main.storyboard */; };
 		65D614BF1E4765970043A850 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65D614BE1E4765970043A850 /* Assets.xcassets */; };
@@ -25,6 +27,8 @@
 		5C978CEA4D1492FDAA265687 /* Pods_InommaTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InommaTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6500620D1E48F161004BF5E1 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		650062151E49FDBB004BF5E1 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		6500621D1E4AF290004BF5E1 /* FireBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FireBase.swift; sourceTree = "<group>"; };
+		650062211E4B082F004BF5E1 /* Facebook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Facebook.swift; sourceTree = "<group>"; };
 		65D614B41E4765970043A850 /* InommaTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InommaTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65D614B71E4765970043A850 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65D614BC1E4765970043A850 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 			children = (
 				65D614B71E4765970043A850 /* AppDelegate.swift */,
 				650062151E49FDBB004BF5E1 /* MainVC.swift */,
+				6500621D1E4AF290004BF5E1 /* FireBase.swift */,
+				650062211E4B082F004BF5E1 /* Facebook.swift */,
 				65D614BB1E4765970043A850 /* Main.storyboard */,
 				6500620D1E48F161004BF5E1 /* UserCell.swift */,
 				65D614BE1E4765970043A850 /* Assets.xcassets */,
@@ -252,7 +258,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				650062161E49FDBB004BF5E1 /* MainVC.swift in Sources */,
+				650062221E4B082F004BF5E1 /* Facebook.swift in Sources */,
 				65D614B81E4765970043A850 /* AppDelegate.swift in Sources */,
+				6500621E1E4AF290004BF5E1 /* FireBase.swift in Sources */,
 				6500620E1E48F161004BF5E1 /* UserCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

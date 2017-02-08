@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "8C12757B6F2A975617E5A6857CC3656A2DDD0A8C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "B019C78081A7698DF14E0CA842759196A170EA1D" : 9223372036854775807,
+    "8C12757B6F2A975617E5A6857CC3656A2DDD0A8C" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "544FF448-F2C8-4A19-8A50-FAE1D97A24D2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "B019C78081A7698DF14E0CA842759196A170EA1D" : "",
+    "8C12757B6F2A975617E5A6857CC3656A2DDD0A8C" : "InommaTask\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "InommaTask",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "InommaTask.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/epedoyan\/Inomma.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8C12757B6F2A975617E5A6857CC3656A2DDD0A8C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/epedoyan\/iosProjects.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B019C78081A7698DF14E0CA842759196A170EA1D"
+    }
+  ]
+}
