@@ -10,15 +10,14 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 
-class Facebook: NSObject {
+struct Facebook {
     
-    static let shared = Facebook()
-    
-    func userLoggedIn() -> Bool {
+    func hasUserLoggedIn() -> Bool {
         return (FBSDKAccessToken.current() != nil)
     }
     
-    func fetchLoggedInUserInfo() {
+    func fetchLoggedInUserInfo(_ completionHandler:@escaping (String, String) -> Void) {
+        
         let graphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields" : "id, first_name, last_name, picture.type(normal)"])
         _ = graphRequest?.start(completionHandler: { (connection, result, error) in
             if let error = error {
@@ -27,8 +26,10 @@ class Facebook: NSObject {
             } else
             {
                 guard let result = result as? NSDictionary else { return }
-                FireBase.shared.writeToFireBaseDB(result)
+                FireBase.shared.saveLoggedInUserInfoToDB(result)
+                completionHandler(result["id"] as! String, result["first_name"] as! String)
             }
         })
     }
+    
 }

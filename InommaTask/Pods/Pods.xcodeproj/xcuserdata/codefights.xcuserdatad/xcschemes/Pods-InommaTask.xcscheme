@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EFB0B74522652A07AF2AF0195D77BB17"
+               BlueprintIdentifier = "CFB60293A80EF37E1DD3C2D5D01AFBDA"
                BuildableName = "Pods_InommaTask.framework"
                BlueprintName = "Pods-InommaTask"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EFB0B74522652A07AF2AF0195D77BB17"
+            BlueprintIdentifier = "CFB60293A80EF37E1DD3C2D5D01AFBDA"
             BuildableName = "Pods_InommaTask.framework"
             BlueprintName = "Pods-InommaTask"
             ReferencedContainer = "container:Pods.xcodeproj">
